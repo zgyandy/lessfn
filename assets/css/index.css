@@ -12,6 +12,14 @@ a {
   text-decoration: none;
   color: inherit;
 }
+@keyframes circleFn {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(-720deg);
+  }
+}
 .layout {
   width: 1200px;
   margin: 0 auto;
@@ -24,22 +32,24 @@ a {
   background: red;
   overflow: hidden;
   position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0);
+}
+.layout .imgBox img {
+  display: block;
+  width: 400px;
+  margin: 0 auto;
+  position: fixed;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
-}
-.layout .imgBox img {
-  display: block;
-  width: 400px;
-  margin: 0 auto;
-}
-.layout .imgBox:hover {
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
 }
 .layout .listOne {
   width: 1200px;
@@ -98,12 +108,15 @@ a {
   line-height: 60px;
   box-shadow: initial;
 }
+.layout .listTwo li:hover {
+  animation: circleFn 300ms normal linear infinite;
+  -o-animation: circleFn 300ms normal linear infinite;
+  -moz-animation: circleFn 300ms normal linear infinite;
+  -webkit-animation: circleFn 300ms normal linear infinite;
+}
 .layout .bin {
-  width: 90px;
-  height: 90px;
-  box-shadow: -2px 4px 0 0 #000;
-  -moz-box-shadow: -2px 4px 0 0 #000;
-  -webkit-box-shadow: -2px 4px 0 0 #000;
+  width: 646px;
+  height: 408px;
   margin: 0 auto;
 }
 /*# sourceMappingURL=./index.css.map */

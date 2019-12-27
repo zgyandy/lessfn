@@ -19,14 +19,24 @@
     .transform(-50%, -50%);
   }
   & when (@dir = left) , (@dir = right) {
-    @dir: 0;
+    & when (@dir = left) {
+      left: 0;
+    }
+    & when (@dir = right) {
+      right: 0;
+    }
     top: 50%;
-    .transform(-50%);
+    .transform(0, -50%);
   }
   & when (@dir = bottom), (@dir = top) {
-    @dir: 0;
+    & when (@dir = bottom) {
+      bottom: 0;
+    }
+    & when (@dir = top) {
+      top: 0;
+    }
     left: 50%;
-    .transform(0, -50%);
+    .transform(-50%);
   }
 }
 // 偏移量
@@ -65,7 +75,7 @@
   -webkit-flex: n;
 }
 // 动画
-.animate (@name; @dur: 3s; @delay: 0; @dir: normal; @timing: linear; @fill: none; @iteration: infinite)  {
+.animate (@name; @dur: 3s; @dir: normal; @timing: linear; @iteration: infinite)  {
   animation: @arguments;
   -o-animation: @arguments;
   -moz-animation:  @arguments;
