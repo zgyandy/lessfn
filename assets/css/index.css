@@ -1,0 +1,109 @@
+@charset "utf-8";
+* {
+  padding: 0;
+  margin: 0;
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.layout {
+  width: 1200px;
+  margin: 0 auto;
+}
+.layout .imgBox {
+  width: 646px;
+  height: 408px;
+  padding: 10px;
+  margin: 0 auto;
+  background: red;
+  overflow: hidden;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+}
+.layout .imgBox img {
+  display: block;
+  width: 400px;
+  margin: 0 auto;
+}
+.layout .imgBox:hover {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+.layout .listOne {
+  width: 1200px;
+  height: 80px;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  align-items: center;
+  -webkit-align-items: center;
+  flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  flex-direction: row;
+  -ms-flex-direction: row;
+  -webkit-flex-direction: row;
+  align-content: start;
+  -webkit-align-content: start;
+  background: red;
+}
+.layout .listOne li {
+  width: 60px;
+  height: 60px;
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  line-height: 60px;
+  background: green;
+}
+.layout .listTwo {
+  width: 1200px;
+  height: 80px;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: space-around;
+  -webkit-justify-content: space-around;
+  align-items: center;
+  -webkit-align-items: center;
+  flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  flex-direction: row;
+  -ms-flex-direction: row;
+  -webkit-flex-direction: row;
+  align-content: start;
+  -webkit-align-content: start;
+  background: yellow;
+}
+.layout .listTwo li {
+  width: 60px;
+  height: 60px;
+  background: green;
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  line-height: 60px;
+  box-shadow: initial;
+}
+.layout .bin {
+  width: 90px;
+  height: 90px;
+  box-shadow: -2px 4px 0 0 #000;
+  -moz-box-shadow: -2px 4px 0 0 #000;
+  -webkit-box-shadow: -2px 4px 0 0 #000;
+  margin: 0 auto;
+}
+/*# sourceMappingURL=./index.css.map */

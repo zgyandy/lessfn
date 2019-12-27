@@ -1,0 +1,80 @@
+// 盒模型
+.boxModel(@box: border-box) {
+  box-sizing: @box;
+  -moz-box-sizing: @box;
+  -webkit-box-sizing: @box;
+}
+// 不适用设置多种shadow样式
+.boxShadow (@x: 0; @y: 0; @blur: 0; @spread: 0; @color: #000;) when(iscolor(@color)) {
+  box-shadow: @arguments;
+  -moz-box-shadow: @arguments;
+  -webkit-box-shadow: @arguments;
+}
+// fixed
+.fixed (@dir: center) {
+  position: fixed;
+  & when (@dir = center) {
+    left: 50%;
+    top: 50%;
+    .transform(-50%, -50%);
+  }
+  & when (@dir = left) , (@dir = right) {
+    @dir: 0;
+    top: 50%;
+    .transform(-50%);
+  }
+  & when (@dir = bottom), (@dir = top) {
+    @dir: 0;
+    left: 50%;
+    .transform(0, -50%);
+  }
+}
+// 偏移量
+.transform (@x: 0; @y: 0) {
+  transform: translate(@x, @y);
+  -o-transform: translate(@x, @y);
+  -moz-transform: translate(@x, @y);
+  -webkit-transform: translate(@x, @y);
+}
+// flex
+.flex(@justify: left; @aline: center; @flexWrap: nowrap; @dir: row; @content: start) {
+  display: flex;
+  display: -webkit-flex;
+  
+  justify-content: @justify;
+  -webkit-justify-content: @justify;// edge
+  
+  align-items: @aline;
+  -webkit-align-items: @aline;
+  // The flex-wrap CSS property sets whether flex items are forced onto one line or can wrap onto multiple lines. If wrapping is allowed, it sets the direction that lines are stacked.
+  flex-wrap: @flexWrap;
+  -ms-flex-wrap: @flexWrap;
+  -webkit-flex-wrap: @flexWrap; // safari
+  // 轴方向
+  flex-direction: @dir;
+  -ms-flex-direction: @dir;
+  -webkit-flex-direction: @dir;
+  // The CSS align-content property sets the distribution of space between and around content items along a flexbox's cross-axis or a grid's block axis.
+  align-content: @content;
+  -webkit-align-content: @content;
+}
+// Three values: flex-grow | flex-shrink | flex-basis
+.flexW (n) {
+  flex: n;
+  -ms-flex: n;
+  -webkit-flex: n;
+}
+// 动画
+.animate (@name; @dur: 3s; @delay: 0; @dir: normal; @timing: linear; @fill: none; @iteration: infinite)  {
+  animation: @arguments;
+  -o-animation: @arguments;
+  -moz-animation:  @arguments;
+  -webkit-animation:  @arguments;
+}
+// 动画状态默认停止
+.playState (@state: paused) {
+  animation-play-state: @state;
+  -o-animation-play-state: @state;
+  -moz-animation-play-state: @state;
+  -webkit-animation-play-state: @state;
+}

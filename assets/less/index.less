@@ -1,0 +1,61 @@
+@charset "utf-8";
+@import './init.less';
+@import "./fn.less";
+.layout {
+  width: 1200px;
+  margin: 0 auto;
+  .imgBox {
+    width: image-width('../img/1.jpg');
+    height: image-height('../img/1.jpg');
+    padding: 10px;
+    margin: 0 auto;
+    background: red;
+    overflow: hidden;
+    .fixed(center); 
+    img {
+      display: block;
+      width: 400px;
+      margin: 0 auto;
+    }
+    &:hover {
+      .boxModel
+    }
+  }
+  .listOne {
+    width: 1200px;
+    height: 80px;
+    .flex(space-between, center);
+    background: red;
+    li {
+      width: 60px;
+      height: 60px;
+      color: #fff;
+      font-size: 20px;
+      text-align: center;
+      line-height: 60px;
+      background: green;
+    }
+  }
+  .listTwo {
+    width: 1200px;
+    height: 80px;
+    .flex(@aline: center; @justify: space-around);
+    background: yellow;
+    li {
+      width: 60px;
+      height: 60px;
+      background: green;
+      color: #fff;
+      font-size: 20px;
+      text-align: center;
+      line-height: 60px;
+      box-shadow: initial;
+    }
+  }
+  .bin {
+    width: 90px;
+    height: 90px;
+    .boxShadow(@x: -2px; @y: 4px);
+    margin: 0 auto;
+  }
+}
