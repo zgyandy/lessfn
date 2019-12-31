@@ -138,10 +138,6 @@
   animation-fill-mode: @fill;
   -o-animation-fill-mode: @fill;
   -webkit-animation-fill-mode: @fill;
-  // animation: @arguments;
-  // -o-animation: @arguments;
-  // -moz-animation:  @arguments;
-  // -webkit-animation:  @arguments;
 }
 // 动画状态默认停止
 .playState(@state: paused) {
@@ -149,4 +145,39 @@
   -o-animation-play-state: @state;
   -moz-animation-play-state: @state;
   -webkit-animation-play-state: @state;
+}
+// input placeholder
+.placeholder (@color: #000; @size: 12px; @style: normal; @variant: normal; @weight: normal; @family: inherit; @line: inherit) {
+  input::placeholder {
+    color: @color;
+    font-size: @size;
+    font-style: @style;
+    font-weight: @weight;
+    font-family: @family;
+    line-height: @line;
+  }
+  input:-ms-input-placeholder {
+    color: @color;
+    font-size: @size;
+    font-style: @style;
+    font-weight: @weight;
+    font-family: @family;
+    line-height: @line;
+  }
+  input::-moz-placeholder {
+    color: @color;
+    font-size: @size;
+    font-style: @style;
+    font-weight: @weight;
+    font-family: @family;
+    line-height: @line;
+  }
+  input::-webkit-input-placeholder {
+    color: @color;
+    font-size: @size;
+    font-style: @style;
+    font-weight: @weight;
+    font-family: @family;
+    line-height: @line;
+  }
 }

@@ -9,9 +9,27 @@
     transform: rotate(-720deg);
   }
 });
+.keyframes(shad;{
+  0% {
+    .boxShadow(@spread: 0; @color: rgba(0, 255, 0, 0.5))
+  }
+  25% {
+    .boxShadow(@spread: 5px; @color: rgba(0, 255, 0, 0.4))
+  }
+  50% {
+    .boxShadow(@spread: 10px; @color: rgba(0, 255, 0, 0.3))
+  }
+  75% {
+    .boxShadow(@spread: 15px; @color: rgba(0, 255, 0, 0.2))
+  }
+  100% {
+    .boxShadow(@spread: 20px; @color: rgba(0, 255, 0, 0.1))
+  }
+});
 .layout {
   width: 1200px;
   margin: 0 auto;
+  .placeholder(@color: @red; @size: 20px);
   .imgBox {
     width: image-width('../img/1.jpg');
     height: image-height('../img/1.jpg');
@@ -30,16 +48,30 @@
   .listOne {
     width: 1200px;
     height: 80px;
-    .flex(space-between, center);
+    .flex(center, center);
     background: red;
     li {
-      width: 60px;
-      height: 60px;
+      width: 40px;
+      height: 40px;
       color: #fff;
       font-size: 20px;
       text-align: center;
-      line-height: 60px;
+      line-height: 40px;
       background: green;
+      margin: 0 20px;
+      border-radius: 50%;
+    }
+    li:first-child {
+      .animate(shad; 1200ms;);
+      & + li {
+        .animate(shad; 1200ms);
+      }
+    }
+    li:nth-child(3) {
+       .animate(shad; 1200ms;);
+    }
+    li:last-child {
+      .animate(shad; 1200ms);
     }
   }
   .listTwo {
@@ -66,4 +98,9 @@
     height: image-height('../img/1.jpg');
     margin: 0 auto;
   }
+}
+.inp {
+  height: 30px;
+  width: 200px;
+  line-height: 30px;
 }
