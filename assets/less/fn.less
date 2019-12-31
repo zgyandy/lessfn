@@ -1,3 +1,10 @@
+@charset "utf-8";
+@grayf2: #f2f2f2;
+@gray9: #999;
+@red: #e10030;
+@blue28: #2879e7;
+@green01: #01aa51;
+@orangeff: #ff720b;
 // 盒模型
 .boxModel(@box: border-box) {
   box-sizing: @box;
@@ -47,15 +54,15 @@
   -webkit-transform: translate(@x, @y);
 }
 // flex
-.flex(@justify: left; @aline: center; @flexWrap: nowrap; @dir: row; @content: start) {
+.flex(@justify: left; @align: center; @flexWrap: nowrap; @dir: row; @content: start) {
   display: flex;
   display: -webkit-flex;
   
   justify-content: @justify;
   -webkit-justify-content: @justify;// edge
   
-  align-items: @aline;
-  -webkit-align-items: @aline;
+  align-items: @align;
+  -webkit-align-items: @align;
   // The flex-wrap CSS property sets whether flex items are forced onto one line or can wrap onto multiple lines. If wrapping is allowed, it sets the direction that lines are stacked.
   flex-wrap: @flexWrap;
   -ms-flex-wrap: @flexWrap;
@@ -69,20 +76,75 @@
   -webkit-align-content: @content;
 }
 // Three values: flex-grow | flex-shrink | flex-basis
-.flexW (@n) {
+.flexW(@n) {
   flex: @n;
   -ms-flex: @n;
   -webkit-flex: @n;
 }
-// 动画
-.animate (@name; @dur: 3s; @dir: normal; @timing: linear; @iteration: infinite)  {
-  animation: @arguments;
-  -o-animation: @arguments;
-  -moz-animation:  @arguments;
-  -webkit-animation:  @arguments;
+// 动画名 动画设置
+.keyframes (@name; @options) {
+  @keyframes @name {
+    @options()
+  }
+  @-o-keyframes @name {
+    @options()
+  }
+  @-moz-keyframes @name {
+    @options()
+  }
+  @-webkit-keyframes @name {
+    @options()
+  }
+}
+// 动画 animation 是下面属性的一个简写属性形式。
+// animation-name， 动画名称
+// animation-duration, 动画时间
+// animation-direction， 动画是否反向播放 normal alternate（交替反向运动） reverse（反向运动） alternate-reverse（反向交替， 反向开始交替）
+// animation-delay， // 动画开始时间（延时）
+// animation-timing-function， 动画运动方式（缓冲还是匀速等）对于关键帧动画来说，timing function作用于一个关键帧周期而非整个动画周期，即从关键帧开始开始，到关键帧结束结束。 若该关键帧没有定义缓动函数，则使用定义于整个动画的缓动函数。
+// animation-iteration-count，// 动画
+// animation-fill-mode // 动画运行次数
+// animation-play-state // 动画状态 运行还是暂停
+.animate(@name; @dur: 3s; @dir: normal; @delay: 0; @timing: linear; @iteration: infinite; @fill: none){
+  animation-name: @name;
+  -o-animation-name: @name;
+  -moz-animation-name: @name;
+  -webkit-animation-name: @name;
+
+  animation-duration: @dur;
+  -o-animation-duration: @dur;
+  -moz-animation-duration: @dur;
+  -webkit-animation-duration: @dur;
+
+  animation-direction: @dir;
+  -o-animation-direction: @dir;
+  -moz-animation-direction: @dir;
+  -webkit-animation-direction: @dir;
+
+  animation-delay: @delay;
+  -o-animation-delay: @delay;
+  -moz-animation-delay: @delay;
+  -webkit-animation-delay: @delay;
+
+  animation-timing-function: @timing;
+  -o-animation-timing-function: @timing;
+  -moz-animation-timing-function: @timing;
+  -webkit-animation-timing-function: @timing;
+
+  animation-iteration-count: @iteration;
+  -o-animation-iteration-count: @iteration;
+  -moz-animation-iteration-count: @iteration;
+  -webkit-animation-iteration-count: @iteration;
+  animation-fill-mode: @fill;
+  -o-animation-fill-mode: @fill;
+  -webkit-animation-fill-mode: @fill;
+  // animation: @arguments;
+  // -o-animation: @arguments;
+  // -moz-animation:  @arguments;
+  // -webkit-animation:  @arguments;
 }
 // 动画状态默认停止
-.playState (@state: paused) {
+.playState(@state: paused) {
   animation-play-state: @state;
   -o-animation-play-state: @state;
   -moz-animation-play-state: @state;

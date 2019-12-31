@@ -1,14 +1,14 @@
 @charset "utf-8";
 @import './init.less';
 @import "./fn.less";
-@keyframes circleFn {
+.keyframes(circleFn; {
   0% {
     transform: rotate(0);
   }
   100% {
     transform: rotate(-720deg);
   }
-}
+});
 .layout {
   width: 1200px;
   margin: 0 auto;
@@ -45,7 +45,7 @@
   .listTwo {
     width: 1200px;
     height: 80px;
-    .flex(@aline: center; @justify: space-around);
+    .flex(@align: center; @justify: space-around);
     background: yellow;
     li {
       width: 60px;

@@ -20,6 +20,30 @@ a {
     transform: rotate(-720deg);
   }
 }
+@-o-keyframes circleFn {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(-720deg);
+  }
+}
+@-moz-keyframes circleFn {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(-720deg);
+  }
+}
+@-webkit-keyframes circleFn {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(-720deg);
+  }
+}
 .layout {
   width: 1200px;
   margin: 0 auto;
@@ -109,10 +133,33 @@ a {
   box-shadow: initial;
 }
 .layout .listTwo li:hover {
-  animation: circleFn 300ms normal linear infinite;
-  -o-animation: circleFn 300ms normal linear infinite;
-  -moz-animation: circleFn 300ms normal linear infinite;
-  -webkit-animation: circleFn 300ms normal linear infinite;
+  animation-name: circleFn;
+  -o-animation-name: circleFn;
+  -moz-animation-name: circleFn;
+  -webkit-animation-name: circleFn;
+  animation-duration: 300ms;
+  -o-animation-duration: 300ms;
+  -moz-animation-duration: 300ms;
+  -webkit-animation-duration: 300ms;
+  animation-direction: normal;
+  -o-animation-direction: normal;
+  -moz-animation-direction: normal;
+  -webkit-animation-direction: normal;
+  animation-delay: 0;
+  -o-animation-delay: 0;
+  -moz-animation-delay: 0;
+  -webkit-animation-delay: 0;
+  animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -webkit-animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+  animation-fill-mode: none;
+  -o-animation-fill-mode: none;
+  -webkit-animation-fill-mode: none;
 }
 .layout .bin {
   width: 646px;
