@@ -1,21 +1,16 @@
+// out: false
 @charset "utf-8";
-@grayf2: #f2f2f2;
-@gray9: #999;
-@red: #e10030;
-@blue28: #2879e7;
-@green01: #01aa51;
-@orangeff: #ff720b;
+@import './var.less';
 // 盒模型
-.boxModel(@box: border-box) {
+.boxSizing(@box: border-box) {
   box-sizing: @box;
-  -moz-box-sizing: @box;
-  -webkit-box-sizing: @box;
 }
 // 不适用设置多种shadow样式
-.boxShadow (@x: 0; @y: 0; @blur: 0; @spread: 0; @color: #000;) when(iscolor(@color)) {
-  box-shadow: @arguments;
-  -moz-box-shadow: @arguments;
-  -webkit-box-shadow: @arguments;
+.boxShadow (@x: 0; @y: 0; @blur: 0; @spread: 0; @color: #000; @inset: '') when(iscolor(@color)) {
+  box-shadow: @x @y @blur @spread @color;
+  & when(@inset = inset) {
+    box-shadow: @arguments;
+  }
 }
 // fixed
 .fixed (@dir: center) {
@@ -49,50 +44,22 @@
 // 偏移量
 .transform (@x: 0; @y: 0) {
   transform: translate(@x, @y);
-  -o-transform: translate(@x, @y);
-  -moz-transform: translate(@x, @y);
-  -webkit-transform: translate(@x, @y);
 }
 // flex
 .flex(@justify: left; @align: center; @flexWrap: nowrap; @dir: row; @content: start) {
   display: flex;
-  display: -webkit-flex;
-  
   justify-content: @justify;
-  -webkit-justify-content: @justify;// edge
-  
   align-items: @align;
-  -webkit-align-items: @align;
   // The flex-wrap CSS property sets whether flex items are forced onto one line or can wrap onto multiple lines. If wrapping is allowed, it sets the direction that lines are stacked.
   flex-wrap: @flexWrap;
-  -ms-flex-wrap: @flexWrap;
-  -webkit-flex-wrap: @flexWrap; // safari
   // 轴方向
   flex-direction: @dir;
-  -ms-flex-direction: @dir;
-  -webkit-flex-direction: @dir;
   // The CSS align-content property sets the distribution of space between and around content items along a flexbox's cross-axis or a grid's block axis.
   align-content: @content;
-  -webkit-align-content: @content;
-}
-// Three values: flex-grow | flex-shrink | flex-basis
-.flexW(@n) {
-  flex: @n;
-  -ms-flex: @n;
-  -webkit-flex: @n;
 }
 // 动画名 动画设置
 .keyframes (@name; @options) {
   @keyframes @name {
-    @options()
-  }
-  @-o-keyframes @name {
-    @options()
-  }
-  @-moz-keyframes @name {
-    @options()
-  }
-  @-webkit-keyframes @name {
     @options()
   }
 }
@@ -107,72 +74,20 @@
 // animation-play-state // 动画状态 运行还是暂停
 .animate(@name; @dur: 3s; @dir: normal; @delay: 0; @timing: linear; @iteration: infinite; @fill: none){
   animation-name: @name;
-  -o-animation-name: @name;
-  -moz-animation-name: @name;
-  -webkit-animation-name: @name;
-
   animation-duration: @dur;
-  -o-animation-duration: @dur;
-  -moz-animation-duration: @dur;
-  -webkit-animation-duration: @dur;
-
   animation-direction: @dir;
-  -o-animation-direction: @dir;
-  -moz-animation-direction: @dir;
-  -webkit-animation-direction: @dir;
-
   animation-delay: @delay;
-  -o-animation-delay: @delay;
-  -moz-animation-delay: @delay;
-  -webkit-animation-delay: @delay;
-
   animation-timing-function: @timing;
-  -o-animation-timing-function: @timing;
-  -moz-animation-timing-function: @timing;
-  -webkit-animation-timing-function: @timing;
-
   animation-iteration-count: @iteration;
-  -o-animation-iteration-count: @iteration;
-  -moz-animation-iteration-count: @iteration;
-  -webkit-animation-iteration-count: @iteration;
   animation-fill-mode: @fill;
-  -o-animation-fill-mode: @fill;
-  -webkit-animation-fill-mode: @fill;
 }
 // 动画状态默认停止
 .playState(@state: paused) {
   animation-play-state: @state;
-  -o-animation-play-state: @state;
-  -moz-animation-play-state: @state;
-  -webkit-animation-play-state: @state;
 }
 // input placeholder
 .placeholder (@color: #000; @size: 12px; @style: normal; @variant: normal; @weight: normal; @family: inherit; @line: inherit) {
   input::placeholder {
-    color: @color;
-    font-size: @size;
-    font-style: @style;
-    font-weight: @weight;
-    font-family: @family;
-    line-height: @line;
-  }
-  input:-ms-input-placeholder {
-    color: @color;
-    font-size: @size;
-    font-style: @style;
-    font-weight: @weight;
-    font-family: @family;
-    line-height: @line;
-  }
-  input::-moz-placeholder {
-    color: @color;
-    font-size: @size;
-    font-style: @style;
-    font-weight: @weight;
-    font-family: @family;
-    line-height: @line;
-  }
-  input::-webkit-input-placeholder {
     color: @color;
     font-size: @size;
     font-style: @style;

@@ -1,4 +1,12 @@
 {
   "editor.fontSize": 12,
-  "editor.tabSize": 2
+  "editor.tabSize": 2,
+  "less.compile": {
+    // "compress": true,
+    "sourceMap": true,
+    "out": "../css/", // 输出文件位置 相对于当前less文件 ${workspaceRoot}\\css\\
+    "relativeUrls": true,
+    "autoprefixer":"> 5%, cover 95%, not ie 6", // 覆盖95%各类版本的浏览,不包含ie6 详细配置 https://github.com/browserslist/browserslist#full-list  查看浏览器列表  npx browserslist
+    // "main": ["index.less", "test.less"]
+  },
 }

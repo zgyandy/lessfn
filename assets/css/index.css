@@ -12,151 +12,99 @@ a {
   text-decoration: none;
   color: inherit;
 }
-@keyframes circleFn {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(-720deg);
-  }
+a:link {
+  color: #999;
 }
-@-o-keyframes circleFn {
+@-webkit-keyframes circleFn {
   0% {
-    transform: rotate(0);
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
   }
   100% {
-    transform: rotate(-720deg);
+    -webkit-transform: rotate(-720deg);
+            transform: rotate(-720deg);
   }
 }
 @-moz-keyframes circleFn {
   0% {
-    transform: rotate(0);
+    -moz-transform: rotate(0);
+         transform: rotate(0);
   }
   100% {
-    transform: rotate(-720deg);
+    -moz-transform: rotate(-720deg);
+         transform: rotate(-720deg);
   }
 }
-@-webkit-keyframes circleFn {
+@keyframes circleFn {
   0% {
-    transform: rotate(0);
+    -webkit-transform: rotate(0);
+       -moz-transform: rotate(0);
+         -o-transform: rotate(0);
+            transform: rotate(0);
   }
   100% {
-    transform: rotate(-720deg);
-  }
-}
-@keyframes shad {
-  0% {
-    box-shadow: 0 0 0 0 rgba(0, 255, 0, 0.5);
-    -moz-box-shadow: 0 0 0 0 rgba(0, 255, 0, 0.5);
-    -webkit-box-shadow: 0 0 0 0 rgba(0, 255, 0, 0.5);
-  }
-  25% {
-    box-shadow: 0 0 0 5px rgba(0, 255, 0, 0.4);
-    -moz-box-shadow: 0 0 0 5px rgba(0, 255, 0, 0.4);
-    -webkit-box-shadow: 0 0 0 5px rgba(0, 255, 0, 0.4);
-  }
-  50% {
-    box-shadow: 0 0 0 10px rgba(0, 255, 0, 0.3);
-    -moz-box-shadow: 0 0 0 10px rgba(0, 255, 0, 0.3);
-    -webkit-box-shadow: 0 0 0 10px rgba(0, 255, 0, 0.3);
-  }
-  75% {
-    box-shadow: 0 0 0 15px rgba(0, 255, 0, 0.2);
-    -moz-box-shadow: 0 0 0 15px rgba(0, 255, 0, 0.2);
-    -webkit-box-shadow: 0 0 0 15px rgba(0, 255, 0, 0.2);
-  }
-  100% {
-    box-shadow: 0 0 0 20px rgba(0, 255, 0, 0.1);
-    -moz-box-shadow: 0 0 0 20px rgba(0, 255, 0, 0.1);
-    -webkit-box-shadow: 0 0 0 20px rgba(0, 255, 0, 0.1);
-  }
-}
-@-o-keyframes shad {
-  0% {
-    box-shadow: 0 0 0 0 rgba(0, 255, 0, 0.5);
-    -moz-box-shadow: 0 0 0 0 rgba(0, 255, 0, 0.5);
-    -webkit-box-shadow: 0 0 0 0 rgba(0, 255, 0, 0.5);
-  }
-  25% {
-    box-shadow: 0 0 0 5px rgba(0, 255, 0, 0.4);
-    -moz-box-shadow: 0 0 0 5px rgba(0, 255, 0, 0.4);
-    -webkit-box-shadow: 0 0 0 5px rgba(0, 255, 0, 0.4);
-  }
-  50% {
-    box-shadow: 0 0 0 10px rgba(0, 255, 0, 0.3);
-    -moz-box-shadow: 0 0 0 10px rgba(0, 255, 0, 0.3);
-    -webkit-box-shadow: 0 0 0 10px rgba(0, 255, 0, 0.3);
-  }
-  75% {
-    box-shadow: 0 0 0 15px rgba(0, 255, 0, 0.2);
-    -moz-box-shadow: 0 0 0 15px rgba(0, 255, 0, 0.2);
-    -webkit-box-shadow: 0 0 0 15px rgba(0, 255, 0, 0.2);
-  }
-  100% {
-    box-shadow: 0 0 0 20px rgba(0, 255, 0, 0.1);
-    -moz-box-shadow: 0 0 0 20px rgba(0, 255, 0, 0.1);
-    -webkit-box-shadow: 0 0 0 20px rgba(0, 255, 0, 0.1);
-  }
-}
-@-moz-keyframes shad {
-  0% {
-    box-shadow: 0 0 0 0 rgba(0, 255, 0, 0.5);
-    -moz-box-shadow: 0 0 0 0 rgba(0, 255, 0, 0.5);
-    -webkit-box-shadow: 0 0 0 0 rgba(0, 255, 0, 0.5);
-  }
-  25% {
-    box-shadow: 0 0 0 5px rgba(0, 255, 0, 0.4);
-    -moz-box-shadow: 0 0 0 5px rgba(0, 255, 0, 0.4);
-    -webkit-box-shadow: 0 0 0 5px rgba(0, 255, 0, 0.4);
-  }
-  50% {
-    box-shadow: 0 0 0 10px rgba(0, 255, 0, 0.3);
-    -moz-box-shadow: 0 0 0 10px rgba(0, 255, 0, 0.3);
-    -webkit-box-shadow: 0 0 0 10px rgba(0, 255, 0, 0.3);
-  }
-  75% {
-    box-shadow: 0 0 0 15px rgba(0, 255, 0, 0.2);
-    -moz-box-shadow: 0 0 0 15px rgba(0, 255, 0, 0.2);
-    -webkit-box-shadow: 0 0 0 15px rgba(0, 255, 0, 0.2);
-  }
-  100% {
-    box-shadow: 0 0 0 20px rgba(0, 255, 0, 0.1);
-    -moz-box-shadow: 0 0 0 20px rgba(0, 255, 0, 0.1);
-    -webkit-box-shadow: 0 0 0 20px rgba(0, 255, 0, 0.1);
+    -webkit-transform: rotate(-720deg);
+       -moz-transform: rotate(-720deg);
+         -o-transform: rotate(-720deg);
+            transform: rotate(-720deg);
   }
 }
 @-webkit-keyframes shad {
   0% {
     box-shadow: 0 0 0 0 rgba(0, 255, 0, 0.5);
-    -moz-box-shadow: 0 0 0 0 rgba(0, 255, 0, 0.5);
-    -webkit-box-shadow: 0 0 0 0 rgba(0, 255, 0, 0.5);
   }
   25% {
     box-shadow: 0 0 0 5px rgba(0, 255, 0, 0.4);
-    -moz-box-shadow: 0 0 0 5px rgba(0, 255, 0, 0.4);
-    -webkit-box-shadow: 0 0 0 5px rgba(0, 255, 0, 0.4);
   }
   50% {
     box-shadow: 0 0 0 10px rgba(0, 255, 0, 0.3);
-    -moz-box-shadow: 0 0 0 10px rgba(0, 255, 0, 0.3);
-    -webkit-box-shadow: 0 0 0 10px rgba(0, 255, 0, 0.3);
   }
   75% {
     box-shadow: 0 0 0 15px rgba(0, 255, 0, 0.2);
-    -moz-box-shadow: 0 0 0 15px rgba(0, 255, 0, 0.2);
-    -webkit-box-shadow: 0 0 0 15px rgba(0, 255, 0, 0.2);
   }
   100% {
     box-shadow: 0 0 0 20px rgba(0, 255, 0, 0.1);
-    -moz-box-shadow: 0 0 0 20px rgba(0, 255, 0, 0.1);
-    -webkit-box-shadow: 0 0 0 20px rgba(0, 255, 0, 0.1);
+  }
+}
+@-moz-keyframes shad {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 255, 0, 0.5);
+  }
+  25% {
+    box-shadow: 0 0 0 5px rgba(0, 255, 0, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(0, 255, 0, 0.3);
+  }
+  75% {
+    box-shadow: 0 0 0 15px rgba(0, 255, 0, 0.2);
+  }
+  100% {
+    box-shadow: 0 0 0 20px rgba(0, 255, 0, 0.1);
+  }
+}
+@keyframes shad {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 255, 0, 0.5);
+  }
+  25% {
+    box-shadow: 0 0 0 5px rgba(0, 255, 0, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(0, 255, 0, 0.3);
+  }
+  75% {
+    box-shadow: 0 0 0 15px rgba(0, 255, 0, 0.2);
+  }
+  100% {
+    box-shadow: 0 0 0 20px rgba(0, 255, 0, 0.1);
   }
 }
 .layout {
   width: 1200px;
   margin: 0 auto;
 }
-.layout input::placeholder {
+.layout input::-webkit-input-placeholder {
   color: #e10030;
   font-size: 20px;
   font-style: normal;
@@ -164,7 +112,7 @@ a {
   font-family: inherit;
   line-height: inherit;
 }
-.layout input:-ms-input-placeholder {
+.layout input:-moz-placeholder {
   color: #e10030;
   font-size: 20px;
   font-style: normal;
@@ -180,7 +128,23 @@ a {
   font-family: inherit;
   line-height: inherit;
 }
-.layout input::-webkit-input-placeholder {
+.layout input:-ms-input-placeholder {
+  color: #e10030;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: normal;
+  font-family: inherit;
+  line-height: inherit;
+}
+.layout input::-ms-input-placeholder {
+  color: #e10030;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: normal;
+  font-family: inherit;
+  line-height: inherit;
+}
+.layout input::placeholder {
   color: #e10030;
   font-size: 20px;
   font-style: normal;
@@ -198,10 +162,11 @@ a {
   position: fixed;
   bottom: 0;
   left: 50%;
-  transform: translate(-50%, 0);
-  -o-transform: translate(-50%, 0);
-  -moz-transform: translate(-50%, 0);
   -webkit-transform: translate(-50%, 0);
+     -moz-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+       -o-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
 }
 .layout .imgBox img {
   display: block;
@@ -210,28 +175,43 @@ a {
   position: fixed;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
+     -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+       -o-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 .layout .listOne {
   width: 1200px;
   height: 80px;
-  display: flex;
+  display: -webkit-box;
   display: -webkit-flex;
-  justify-content: center;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
   -webkit-justify-content: center;
-  align-items: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
   -webkit-align-items: center;
-  flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-flex-wrap: nowrap;
-  flex-direction: row;
-  -ms-flex-direction: row;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
   -webkit-flex-direction: row;
-  align-content: start;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-align-content: start;
+      -ms-flex-line-pack: start;
+          align-content: start;
   background: red;
 }
 .layout .listOne li {
@@ -246,138 +226,126 @@ a {
   border-radius: 50%;
 }
 .layout .listOne li:first-child {
-  animation-name: shad;
-  -o-animation-name: shad;
-  -moz-animation-name: shad;
   -webkit-animation-name: shad;
-  animation-duration: 1200ms;
-  -o-animation-duration: 1200ms;
-  -moz-animation-duration: 1200ms;
+     -moz-animation-name: shad;
+          animation-name: shad;
   -webkit-animation-duration: 1200ms;
-  animation-direction: normal;
-  -o-animation-direction: normal;
-  -moz-animation-direction: normal;
+     -moz-animation-duration: 1200ms;
+          animation-duration: 1200ms;
   -webkit-animation-direction: normal;
-  animation-delay: 0;
-  -o-animation-delay: 0;
-  -moz-animation-delay: 0;
+     -moz-animation-direction: normal;
+          animation-direction: normal;
   -webkit-animation-delay: 0;
-  animation-timing-function: linear;
-  -o-animation-timing-function: linear;
-  -moz-animation-timing-function: linear;
+     -moz-animation-delay: 0;
+          animation-delay: 0;
   -webkit-animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  -o-animation-iteration-count: infinite;
-  -moz-animation-iteration-count: infinite;
+     -moz-animation-timing-function: linear;
+          animation-timing-function: linear;
   -webkit-animation-iteration-count: infinite;
-  animation-fill-mode: none;
-  -o-animation-fill-mode: none;
+     -moz-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
   -webkit-animation-fill-mode: none;
+     -moz-animation-fill-mode: none;
+          animation-fill-mode: none;
 }
 .layout .listOne li:first-child + li {
-  animation-name: shad;
-  -o-animation-name: shad;
-  -moz-animation-name: shad;
   -webkit-animation-name: shad;
-  animation-duration: 1200ms;
-  -o-animation-duration: 1200ms;
-  -moz-animation-duration: 1200ms;
+     -moz-animation-name: shad;
+          animation-name: shad;
   -webkit-animation-duration: 1200ms;
-  animation-direction: normal;
-  -o-animation-direction: normal;
-  -moz-animation-direction: normal;
+     -moz-animation-duration: 1200ms;
+          animation-duration: 1200ms;
   -webkit-animation-direction: normal;
-  animation-delay: 0;
-  -o-animation-delay: 0;
-  -moz-animation-delay: 0;
+     -moz-animation-direction: normal;
+          animation-direction: normal;
   -webkit-animation-delay: 0;
-  animation-timing-function: linear;
-  -o-animation-timing-function: linear;
-  -moz-animation-timing-function: linear;
+     -moz-animation-delay: 0;
+          animation-delay: 0;
   -webkit-animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  -o-animation-iteration-count: infinite;
-  -moz-animation-iteration-count: infinite;
+     -moz-animation-timing-function: linear;
+          animation-timing-function: linear;
   -webkit-animation-iteration-count: infinite;
-  animation-fill-mode: none;
-  -o-animation-fill-mode: none;
+     -moz-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
   -webkit-animation-fill-mode: none;
+     -moz-animation-fill-mode: none;
+          animation-fill-mode: none;
 }
 .layout .listOne li:nth-child(3) {
-  animation-name: shad;
-  -o-animation-name: shad;
-  -moz-animation-name: shad;
   -webkit-animation-name: shad;
-  animation-duration: 1200ms;
-  -o-animation-duration: 1200ms;
-  -moz-animation-duration: 1200ms;
+     -moz-animation-name: shad;
+          animation-name: shad;
   -webkit-animation-duration: 1200ms;
-  animation-direction: normal;
-  -o-animation-direction: normal;
-  -moz-animation-direction: normal;
+     -moz-animation-duration: 1200ms;
+          animation-duration: 1200ms;
   -webkit-animation-direction: normal;
-  animation-delay: 0;
-  -o-animation-delay: 0;
-  -moz-animation-delay: 0;
+     -moz-animation-direction: normal;
+          animation-direction: normal;
   -webkit-animation-delay: 0;
-  animation-timing-function: linear;
-  -o-animation-timing-function: linear;
-  -moz-animation-timing-function: linear;
+     -moz-animation-delay: 0;
+          animation-delay: 0;
   -webkit-animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  -o-animation-iteration-count: infinite;
-  -moz-animation-iteration-count: infinite;
+     -moz-animation-timing-function: linear;
+          animation-timing-function: linear;
   -webkit-animation-iteration-count: infinite;
-  animation-fill-mode: none;
-  -o-animation-fill-mode: none;
+     -moz-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
   -webkit-animation-fill-mode: none;
+     -moz-animation-fill-mode: none;
+          animation-fill-mode: none;
 }
 .layout .listOne li:last-child {
-  animation-name: shad;
-  -o-animation-name: shad;
-  -moz-animation-name: shad;
   -webkit-animation-name: shad;
-  animation-duration: 1200ms;
-  -o-animation-duration: 1200ms;
-  -moz-animation-duration: 1200ms;
+     -moz-animation-name: shad;
+          animation-name: shad;
   -webkit-animation-duration: 1200ms;
-  animation-direction: normal;
-  -o-animation-direction: normal;
-  -moz-animation-direction: normal;
+     -moz-animation-duration: 1200ms;
+          animation-duration: 1200ms;
   -webkit-animation-direction: normal;
-  animation-delay: 0;
-  -o-animation-delay: 0;
-  -moz-animation-delay: 0;
+     -moz-animation-direction: normal;
+          animation-direction: normal;
   -webkit-animation-delay: 0;
-  animation-timing-function: linear;
-  -o-animation-timing-function: linear;
-  -moz-animation-timing-function: linear;
+     -moz-animation-delay: 0;
+          animation-delay: 0;
   -webkit-animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  -o-animation-iteration-count: infinite;
-  -moz-animation-iteration-count: infinite;
+     -moz-animation-timing-function: linear;
+          animation-timing-function: linear;
   -webkit-animation-iteration-count: infinite;
-  animation-fill-mode: none;
-  -o-animation-fill-mode: none;
+     -moz-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
   -webkit-animation-fill-mode: none;
+     -moz-animation-fill-mode: none;
+          animation-fill-mode: none;
 }
 .layout .listTwo {
   width: 1200px;
   height: 80px;
-  display: flex;
+  display: -webkit-box;
   display: -webkit-flex;
-  justify-content: space-around;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-justify-content: space-around;
-  align-items: center;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  -webkit-box-align: center;
   -webkit-align-items: center;
-  flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-flex-wrap: nowrap;
-  flex-direction: row;
-  -ms-flex-direction: row;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
   -webkit-flex-direction: row;
-  align-content: start;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-align-content: start;
+      -ms-flex-line-pack: start;
+          align-content: start;
   background: yellow;
 }
 .layout .listTwo li {
@@ -391,33 +359,27 @@ a {
   box-shadow: initial;
 }
 .layout .listTwo li:hover {
-  animation-name: circleFn;
-  -o-animation-name: circleFn;
-  -moz-animation-name: circleFn;
   -webkit-animation-name: circleFn;
-  animation-duration: 300ms;
-  -o-animation-duration: 300ms;
-  -moz-animation-duration: 300ms;
+     -moz-animation-name: circleFn;
+          animation-name: circleFn;
   -webkit-animation-duration: 300ms;
-  animation-direction: normal;
-  -o-animation-direction: normal;
-  -moz-animation-direction: normal;
+     -moz-animation-duration: 300ms;
+          animation-duration: 300ms;
   -webkit-animation-direction: normal;
-  animation-delay: 0;
-  -o-animation-delay: 0;
-  -moz-animation-delay: 0;
+     -moz-animation-direction: normal;
+          animation-direction: normal;
   -webkit-animation-delay: 0;
-  animation-timing-function: linear;
-  -o-animation-timing-function: linear;
-  -moz-animation-timing-function: linear;
+     -moz-animation-delay: 0;
+          animation-delay: 0;
   -webkit-animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  -o-animation-iteration-count: infinite;
-  -moz-animation-iteration-count: infinite;
+     -moz-animation-timing-function: linear;
+          animation-timing-function: linear;
   -webkit-animation-iteration-count: infinite;
-  animation-fill-mode: none;
-  -o-animation-fill-mode: none;
+     -moz-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
   -webkit-animation-fill-mode: none;
+     -moz-animation-fill-mode: none;
+          animation-fill-mode: none;
 }
 .layout .bin {
   width: 646px;
@@ -428,5 +390,12 @@ a {
   height: 30px;
   width: 200px;
   line-height: 30px;
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
+  -webkit-transform: translate(30px, 0);
+     -moz-transform: translate(30px, 0);
+      -ms-transform: translate(30px, 0);
+       -o-transform: translate(30px, 0);
+          transform: translate(30px, 0);
 }
 /*# sourceMappingURL=./index.css.map */
